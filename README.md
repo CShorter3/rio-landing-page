@@ -54,13 +54,23 @@ npm ci
 npm run dev
 ```
 
+`npm run dev` starts the Sites/Vinext development server. To run the same
+application with the standard Next.js development server used by Vercel:
+
+```bash
+npm run dev:vercel
+```
+
 Useful checks:
 
 ```bash
-npm run lint
-npm run build
-npm test
+npm run check
 ```
+
+The complete check runs linting, the standard Next.js/Vercel production build,
+the Sites/Vinext production build, and the rendered HTML test. The two hosting
+targets share the same `app/`, components, content, fonts, and image assets;
+only their build adapters differ.
 
 ## Environment variables
 
