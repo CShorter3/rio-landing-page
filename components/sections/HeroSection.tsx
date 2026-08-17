@@ -57,8 +57,8 @@ export function HeroSection() {
       </div>
 
       <div className="hero-caption">
-        <span>Brazil · 2026</span>
-        <span>Travel · Culture · Connection</span>
+        {/* <span>Brazil · 2026</span> */}
+        <span>Scenic Views · Electric Nightlife · Moderate Adventure · Great Eats · Real Immersion</span>
       </div>
     </section>
   );
