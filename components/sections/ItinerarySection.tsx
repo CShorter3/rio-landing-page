@@ -98,8 +98,8 @@ export function ItinerarySection() {
         <section className="salvador-section" id="salvador" aria-labelledby="salvador-title">
           <div className="salvador-terrain" aria-hidden="true" />
           <div className="section-shell salvador-shell">
-            // "The premium extension" text should be a h2 heading. The text needs the same styling "The Rio flow""
-            <h2 className="premium-extension-label">The premium extension</h2>
+            {/* // "The premium extension" text should be a h2 heading. The text needs the same styling "The Rio flow"" */}
+            <h2 className="itinerary-title">The premium extension</h2>
             <div className="experience-heading light-heading">
               <div>
                 <p className="kicker kicker-light">Four more nights · up to 6 continuation travelers</p>
