@@ -106,7 +106,7 @@ const planningSummary = [
 export const tripData: TripData = {
   title: "Sofound Brazil Journey",
   location: "Rio de Janeiro + Salvador, Brazil",
-  eyebrow: "Founder-hosted Brazil journey · November 12–21, 2026",
+  eyebrow: "Rio de Janeiro · November 12–17, 2026",
   headline: "When was the last time you felt completely alive?",
   introduction:
     "Most people don’t need another vacation—they need an experience that reminds them how big the world is, how meaningful genuine connection can be, and who they’re capable of becoming.",
