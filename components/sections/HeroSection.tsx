@@ -49,8 +49,8 @@ export function HeroSection() {
             </Link>
           </div>
           <p className="hero-trustline">
-            5 or 9 nights <span aria-hidden="true">·</span> Small founder-hosted
-            group <span aria-hidden="true">·</span> Reserve from $295{" "}
+            5 or 9 nights <span aria-hidden="true">·</span> Small group
+            <span aria-hidden="true">·</span> Reserve from $295{" "}
             <span aria-hidden="true">·</span> Payment plans available
           </p>
         </Reveal>
