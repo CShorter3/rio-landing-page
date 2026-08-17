@@ -101,6 +101,8 @@ export function ItinerarySection() {
         <div className="premium-extension-header" style={{ marginTop: "3rem", marginBottom: "1.5rem" }}>
           <h2 className="itinerary-title">The premium extension.</h2>
           {/* <p className="kicker kicker-light">Four more nights · up to 6 continuation travelers</p> */}
+          <p>Salvador changes the rhythm. Rio’s outward energy gives way to a more intimate continuation shaped by Afro-Brazilian culture, regional food, local context, tropical coastline, and more room to exhale.
+          </p>
         </div>
 
         <section className="salvador-section" id="salvador" aria-labelledby="salvador-title">
