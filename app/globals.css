@@ -2007,85 +2007,6 @@ h3 {
   text-align: center;
 }
 
-/* Book with confidence horizontal policy shelf */
-.confidence-section {
-  background: var(--espresso-deep);
-  color: var(--off-white);
-}
-
-.confidence-heading {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: end;
-}
-
-.confidence-heading h2 {
-  max-width: 850px;
-  margin-top: 0.8rem;
-  grid-column: 1 / -1;
-}
-
-.confidence-heading > p:last-child {
-  grid-column: 2;
-  grid-row: 1;
-  color: var(--dusty-green);
-}
-
-.confidence-shelf {
-  grid-auto-columns: minmax(310px, 1fr);
-  margin-top: clamp(3rem, 6vw, 6rem);
-  border-block: 1px solid rgba(255, 248, 236, 0.18);
-}
-
-.confidence-shelf article {
-  min-height: 330px;
-  border-right: 1px solid rgba(255, 248, 236, 0.18);
-  padding: 2rem;
-}
-
-.confidence-shelf article:first-child {
-  padding-left: 0;
-}
-
-.confidence-shelf article:last-child {
-  border-right: 0;
-}
-
-.confidence-shelf span {
-  color: var(--terracotta);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.confidence-shelf h3 {
-  margin-top: 4.5rem;
-  font-size: clamp(2rem, 3vw, 3rem);
-}
-
-.confidence-shelf p {
-  margin-top: 1rem;
-  color: var(--dusty-green);
-  font-size: 0.82rem;
-}
-
-.confidence-action {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.confidence-action p {
-  max-width: 550px;
-  color: var(--sand);
-  font-size: 0.72rem;
-  text-align: right;
-}
-
 /* FAQ horizontal category shelf */
 .faq-section {
   background: var(--forest-deep);
@@ -3157,15 +3078,12 @@ h3 {
     text-align: left;
   }
 
-  .host-stages,
-  .confidence-shelf {
+  .host-stages {
     grid-auto-columns: 84vw;
   }
 
   .host-stages article,
-  .host-stages article:first-child,
-  .confidence-shelf article,
-  .confidence-shelf article:first-child {
+  .host-stages article:first-child {
     padding: 1.5rem;
   }
 
@@ -3192,28 +3110,6 @@ h3 {
 
   .price-card .button {
     margin-top: 1rem;
-  }
-
-  .confidence-heading {
-    grid-template-columns: 1fr;
-  }
-
-  .confidence-heading > p:last-child {
-    grid-column: 1;
-    grid-row: auto;
-  }
-
-  .confidence-shelf h3 {
-    margin-top: 3rem;
-  }
-
-  .confidence-action {
-    align-items: stretch;
-    flex-direction: column;
-  }
-
-  .confidence-action p {
-    text-align: left;
   }
 
   .faq-shelf {
