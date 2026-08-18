@@ -14,6 +14,33 @@ const compactDate = (date: string) => {
   return `${weekday.slice(0, 3).toUpperCase()} · ${month.slice(0, 3).toUpperCase()} ${day}`;
 };
 
+const rioDayImages = [
+  {
+    src: "/images/sofound-house/exterior.jpg",
+    alt: "An art-filled courtyard at the Sofound House in Rio",
+  },
+  {
+    src: "/images/sofound-hero-mobile.webp",
+    alt: "A coastal overlook above Rio de Janeiro",
+  },
+  {
+    src: "/images/sofound-house/bedroom.jpg",
+    alt: "A warm shared space prepared for the Rio group",
+  },
+  {
+    src: "/images/sofound-hero-desktop.webp",
+    alt: "Brazilian coastline and open water",
+  },
+  {
+    src: "/images/sofound-house/living.jpg",
+    alt: "A sunlit pool and gathering space in Brazil",
+  },
+  {
+    src: "/images/sofound-house/garden.jpg",
+    alt: "A hosted meal being prepared for Sofound travelers",
+  },
+] as const;
+
 export function ItinerarySection() {
   const handleToggle = (
     event: SyntheticEvent<HTMLDetailsElement>,
@@ -69,21 +96,44 @@ export function ItinerarySection() {
               </summary>
               <div className="day-body">
                 <div className="day-body-inner">
-                  <p className="day-preview">{day.preview}</p>
-                  <div className="timeline">
-                    {day.timeline.map((item) => (
-                      <div className="tl-item" key={`${item.time}-${item.text}`}>
-                        <span className="tl-time">{item.time}</span>
-                        <div className="tl-content">
-                          <span className="tl-text">{item.text}</span>
-                          {item.label ? (
-                            <span className={labelClass(item.label)}>
-                              {item.label}
-                            </span>
-                          ) : null}
-                        </div>
+                  <div className="day-body-grid">
+                    <div className="day-body-copy">
+                      <p className="day-preview">{day.preview}</p>
+                      <div className="timeline">
+                        {day.timeline.map((item) => (
+                          <div className="tl-item" key={`${item.time}-${item.text}`}>
+                            <span className="tl-time">{item.time}</span>
+                            <div className="tl-content">
+                              <span className="tl-text">{item.text}</span>
+                              {item.label ? (
+                                <span className={labelClass(item.label)}>
+                                  {item.label}
+                                </span>
+                              ) : null}
+                            </div>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
+                    <div
+                      className="day-media"
+                      role="img"
+                      aria-label={rioDayImages[index].alt}
+                      style={{ backgroundImage: `url(${rioDayImages[index].src})` }}
+                    />
+                  </div>
+                  <div className="day-reserve-cta">
+                    <div>
+                      <span>Rio Core · Nov 12–17</span>
+                      <strong>5 nights · {formatUsd(1995)} total</strong>
+                    </div>
+                    <ReserveButton
+                      className="button button-primary"
+                      journeyId="rio-core"
+                      ctaLocation={`rio-day-${day.day}-reserve`}
+                    >
+                      Reserve Rio Core · $295
+                    </ReserveButton>
                   </div>
                 </div>
               </div>
@@ -91,13 +141,6 @@ export function ItinerarySection() {
           ))}
         </div>
 
-        {/*
-          Legacy Bahia continuation panel intentionally retained in version history.
-          Replaced below with the premium-extension itinerary structure.
-        */}
-
-
-        
         <div className="itinerary-heading premium-extension-header">
           <div>
             <h2 id="premium-extension-title">The premium extension.</h2>
