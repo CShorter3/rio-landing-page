@@ -60,6 +60,59 @@ export function ItinerarySection() {
       aria-labelledby="itinerary-title"
     >
       <div className="section-shell itinerary-shell">
+        <div
+          className="journey-context"
+          id="journey"
+          aria-labelledby="journey-context-title"
+        >
+          <header className="journey-context-header">
+            <div>
+              <p className="kicker kicker-light">
+                Two rhythms. One complete journey.
+              </p>
+              <h2 id="journey-context-title">
+                Rio is complete. Bahia goes deeper.
+              </h2>
+            </div>
+            <p>
+              Start with five vivid nights in Rio. Continue to Salvador only
+              if you want a smaller group, a slower pace, and four more nights
+              rooted in Bahia.
+            </p>
+          </header>
+
+          <div className="journey-context-grid">
+            <article>
+              <p className="journey-context-label">01 · Rio wakes you up</p>
+              <h3>Rio Core is the trip.</h3>
+              <p>
+                Coastline, movement, music, and shared energy shape the five
+                nights. Time on the water and in Rio’s landscapes meets locally
+                led food, culture, heritage, and optional nightlife—the kind of
+                mix that turns a new group into a real community.
+              </p>
+              <strong>November 12–17 · 5 nights · complete on its own</strong>
+            </article>
+            <article>
+              <p className="journey-context-label">
+                02 · Salvador, Bahia takes you deeper
+              </p>
+              <h3>Bahia is the optional upgrade.</h3>
+              <p>
+                For up to six continuing travelers, Rio’s outward energy gives
+                way to a more intimate rhythm shaped by Afro-Brazilian culture,
+                regional food, local context, tropical coastline, and more room
+                to exhale.
+              </p>
+              <strong>November 17–21 · 4 additional nights</strong>
+            </article>
+          </div>
+
+          <blockquote className="journey-context-quote">
+            Rio gives you the momentum. Bahia gives you the depth.
+          </blockquote>
+        </div>
+
         <div className="itinerary-heading">
           <div>
             <p className="kicker kicker-light">Day by day</p>
@@ -143,16 +196,16 @@ export function ItinerarySection() {
 
         <div className="itinerary-heading premium-extension-header">
           <div>
-            <h2 id="premium-extension-title">The premium extension.</h2>
+            <p className="kicker kicker-light">Optional continuation</p>
+            <h2 id="premium-extension-title">The Salvador rhythm.</h2>
             <p className="premium-extension-copy">
-              Salvador changes the rhythm. Rio’s outward energy gives way to a
-              more intimate continuation shaped by Afro-Brazilian culture,
-              regional food, local context, tropical coastline, and room to
-              exhale.
+              Complete Journey travelers fly from Rio to Salvador for four
+              additional shared nights, one included massage, and a smaller,
+              founder-hosted continuation.
             </p>
             <p className="premium-extension-assurance">
-              Rio Core is a complete journey. Salvador is the optional
-              continuation.
+              Rio Core ends complete. Salvador begins only for travelers who
+              choose the extension.
             </p>
           </div>
         </div>

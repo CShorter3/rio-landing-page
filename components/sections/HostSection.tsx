@@ -5,21 +5,22 @@ import { tripData } from "@/lib/trip-data";
 const hostFacts = [
   {
     value: "18+",
-    label: "months traveling independently",
+    label: "months learning how pace, access, and spontaneity change a journey",
   },
   {
     value: "22",
-    label: "countries experienced firsthand",
+    label: "countries that reinforced the value of local perspective",
   },
   {
     value: "14 months",
-    label: "backpacking across 17 African countries",
+    label: "across 17 African countries, led by people as much as place",
   },
 ];
 
 export function HostSection() {
   return (
     <section
+      id="host"
       className="host-section section-pad terrain"
       aria-labelledby="host-title"
     >
@@ -31,22 +32,7 @@ export function HostSection() {
           </h2>
         </header>
 
-        <div className="host-story">
-          <figure className="host-portrait">
-            <div className="host-photo-frame">
-              <Image
-                unoptimized
-                src={tripData.assets.hostConnection}
-                alt="Calid, founder and host of Sofound, seated with a friend during his travels"
-                fill
-                sizes="(min-width: 900px) 38vw, 100vw"
-              />
-            </div>
-            <figcaption>
-              Calid during more than 18 months of independent travel.
-            </figcaption>
-          </figure>
-
+        <div className="host-editorial">
           <div className="host-narrative">
             {tripData.host.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
@@ -56,20 +42,39 @@ export function HostSection() {
               <span>{tripData.host.role}</span>
             </p>
           </div>
-        </div>
 
-        <dl className="host-proof" aria-label="Calid's travel experience">
-          {hostFacts.map((fact) => (
-            <div key={fact.value}>
-              <dt>{fact.value}</dt>
-              <dd>{fact.label}</dd>
+          <aside className="host-evidence" aria-label="Calid's hosting philosophy">
+            <figure className="host-portrait">
+              <div className="host-photo-frame">
+                <Image
+                  unoptimized
+                  src={tripData.assets.hostConnection}
+                  alt="Calid, founder and host of Sofound, seated with a friend during his travels"
+                  fill
+                  sizes="(min-width: 900px) 38vw, 100vw"
+                />
+              </div>
+              <figcaption>
+                Calid during more than 18 months of independent travel.
+              </figcaption>
+            </figure>
+
+            <div className="host-promise">
+              <p className="kicker kicker-light">
+                Founder-hosted · locally led
+              </p>
+              <blockquote>{tripData.host.quote}</blockquote>
             </div>
-          ))}
-        </dl>
 
-        <div className="host-promise">
-          <p className="kicker kicker-light">Founder-hosted · locally led</p>
-          <blockquote>{tripData.host.quote}</blockquote>
+            <dl className="host-proof">
+              {hostFacts.map((fact) => (
+                <div key={fact.value}>
+                  <dt>{fact.value}</dt>
+                  <dd>{fact.label}</dd>
+                </div>
+              ))}
+            </dl>
+          </aside>
         </div>
       </div>
     </section>

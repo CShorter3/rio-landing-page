@@ -402,20 +402,12 @@ export const tripData: TripData = {
   },
   faqGroups: [
     {
-      title: "Joining the group",
+      title: "Group Fit & Vibe",
       items: [
         {
           question: "Can I join if I am traveling solo?",
           answer: [
             "Yes. Sofound is designed for both solo travelers and people arriving with a friend or partner. The shared experience begins before departure through preparation, roommate coordination, and group communication.",
-          ],
-        },
-        {
-          question: "How does rooming work?",
-          answer: [
-            "If you are traveling with a friend or partner, tell us during booking and we will prioritize placing you together.",
-            "For solo travelers, Calid coordinates preferences using the information travelers provide, including gender preference, quiet or social room style, and cleanliness and tidiness habits.",
-            "Preferences support more thoughtful placements but do not guarantee a particular roommate, private room, bed type, bathroom arrangement, or exact room configuration.",
           ],
         },
         {
@@ -425,28 +417,29 @@ export const tripData: TripData = {
             "Travelers should review the itinerary carefully and communicate relevant accessibility or mobility needs before booking.",
           ],
         },
+        {
+          question: "Do I have to participate in nightlife?",
+          answer: [
+            "No. Both planned Rio nightlife outings are optional. Travelers who join will have two escorted return-time options. Nightlife admission, drinks, and personal purchases are not included.",
+          ],
+        },
+        {
+          question: "What are the Daily Gathers?",
+          answer: [
+            "Daily Gathers are part of the core Sofound experience. At some point each day, the group comes together to check in, journal, reflect, or reconnect.",
+            "You will never be required to read from your journal or share something personal. Private writing and personal sharing are always optional.",
+          ],
+        },
       ],
     },
     {
-      title: "Planning",
+      title: "Safety & Local Support",
       items: [
         {
-          question: "Are flights included?",
+          question: "What support is available during the journey?",
           answer: [
-            "Flights to and from Brazil are not included.",
-            "For Complete Journey travelers, the flight from Rio de Janeiro to Salvador is included.",
-          ],
-        },
-        {
-          question: "What happens if I miss the arrival transfer?",
-          answer: [
-            "The complimentary group airport transfer departs at noon on November 12. Travelers who miss it will need to arrange and pay for their own transportation to the Sofound House.",
-          ],
-        },
-        {
-          question: "What travel documents will I need?",
-          answer: [
-            "Travelers are responsible for valid passports and any visa or entry requirements that apply to them. Sofound will share general planning guidance, but travelers should verify current requirements before departure.",
+            "Calid hosts the journey from preparation through return. The official itinerary includes scheduled group transportation, locally led experiences where listed, and two escorted return-time options for each optional nightlife outing.",
+            "Sofound will share pre-trip guidance and material itinerary updates, but travelers remain responsible for personal decisions, documents, insurance, and transportation outside the official itinerary.",
           ],
         },
         {
@@ -455,10 +448,36 @@ export const tripData: TripData = {
             "Tell us about dietary, mobility, or accessibility needs before booking. We’ll review them against the accommodations and itinerary and explain what can reasonably be supported before you commit.",
           ],
         },
+        {
+          question: "Can the itinerary change?",
+          answer: [
+            "Yes. Timing, order, venues, and individual activities may adjust because of weather, local conditions, safety, or operator availability. Sofound will communicate material updates before departure.",
+          ],
+        },
       ],
     },
     {
-      title: "Payment",
+      title: "Roommates & Lodging",
+      items: [
+        {
+          question: "How does rooming work?",
+          answer: [
+            "If you are traveling with a friend or partner, tell us during booking and we will prioritize placing you together.",
+            "For solo travelers, Calid coordinates preferences using the information travelers provide, including gender preference, quiet or social room style, and cleanliness and tidiness habits.",
+            "Preferences support more thoughtful placements but do not guarantee a particular roommate, private room, bed type, bathroom arrangement, or exact room configuration.",
+          ],
+        },
+        {
+          question: "What is confirmed about the Sofound House?",
+          answer: [
+            "Rio Core includes shared Sofound House accommodation in Rio and roommate-preference coordination before departure.",
+            "The final property, bedroom, bed, and bathroom configuration will be shared once confirmed. House photography on this page is illustrative until those details are finalized.",
+          ],
+        },
+      ],
+    },
+    {
+      title: "Deposit & Payment Plans",
       items: [
         {
           question: "Are payment plans available?",
@@ -483,44 +502,64 @@ export const tripData: TripData = {
       ],
     },
     {
-      title: "On the trip",
+      title: "Cancellation & Travel Prep",
       items: [
         {
-          question: "Which meals are included in Rio?",
+          question: "What is the cancellation policy?",
           answer: [
-            "Rio Core includes the private-chef brunch following the Dois Irmãos experience and the group dinner on the Little Africa day. All other meals are purchased separately unless Sofound confirms an additional inclusion before departure.",
+            "Deposits are nonrefundable and applied toward the selected trip total.",
+            "Complete payment deadlines, cancellation terms, and any available credit provisions are still being finalized and must be presented for review before payment. Do not complete a booking until you have reviewed and accepted the final terms.",
           ],
         },
         {
-          question: "Do I have to participate in nightlife?",
+          question: "Are flights included?",
           answer: [
-            "No. Both planned Rio nightlife outings are optional. Travelers who join will have two escorted return-time options. Nightlife admission, drinks, and personal purchases are not included.",
+            "Flights to and from Brazil are not included.",
+            "For Complete Journey travelers, the flight from Rio de Janeiro to Salvador is included.",
           ],
         },
         {
-          question: "What are the Daily Gathers?",
+          question: "What happens if I miss the arrival transfer?",
           answer: [
-            "Daily Gathers are part of the core Sofound experience. At some point each day, the group comes together to check in, journal, reflect, or reconnect.",
-            "You will never be required to read from your journal or share something personal. Private writing and personal sharing are always optional.",
+            "The complimentary group airport transfer departs at noon on November 12. Travelers who miss it will need to arrange and pay for their own transportation to the Sofound House.",
           ],
         },
         {
-          question: "What is confirmed about the Bahia continuation?",
+          question: "What travel documents will I need?",
           answer: [
-            "The Complete Journey includes the flight from Rio to Salvador, four nights of shared accommodation, one included massage, founder-hosted support, and a continuation group of up to six travelers.",
-            "The cultural program is still being developed with local context in mind. Exact activities, hosts, venues, and any Black Consciousness Day programming will be shared once confirmed.",
-          ],
-        },
-        {
-          question: "Can the itinerary change?",
-          answer: [
-            "Yes. Timing, order, venues, and individual activities may adjust because of weather, local conditions, safety, or operator availability. Sofound will communicate material updates before departure.",
+            "Travelers are responsible for valid passports and any visa or entry requirements that apply to them. Sofound will share general planning guidance, but travelers should verify current requirements before departure.",
           ],
         },
         {
           question: "How will I prepare for the trip?",
           answer: [
             "Calid will provide clear pre-trip and arrival guidance by email and/or text, along with roommate-preference coordination and important trip updates.",
+          ],
+        },
+      ],
+    },
+    {
+      title: "Rio Core vs. Salvador Extension",
+      items: [
+        {
+          question: "Is Rio Core a complete trip on its own?",
+          answer: [
+            "Yes. Rio Core is the complete five-night Sofound journey, with shared accommodation, official itinerary transportation, confirmed Rio and Arraial experiences, selected meals, Daily Gathers, and founder-hosted support.",
+            "You do not need to continue to Salvador to receive the core Sofound experience.",
+          ],
+        },
+        {
+          question: "What is confirmed about the Bahia continuation?",
+          answer: [
+            "The Complete Journey includes everything in Rio Core, the flight from Rio to Salvador, four additional nights of shared accommodation, one included massage, founder-hosted support, and a continuation group of up to six travelers.",
+            "The cultural program is still being developed with local context in mind. Exact activities, hosts, venues, and any Black Consciousness Day programming will be shared once confirmed.",
+          ],
+        },
+        {
+          question: "How should I choose between the two journeys?",
+          answer: [
+            "Choose Rio Core if you want the complete five-night experience of culture, coastline, nature, shared meals, optional nightlife, and community.",
+            "Choose the Complete Journey only if you also want four slower, more intimate nights in Salvador with a smaller continuation group. Rio gives you the momentum; Bahia gives you the depth.",
           ],
         },
       ],
