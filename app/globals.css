@@ -3398,3 +3398,32 @@ h3 {
     font-size: 0.52rem;
     letter-spacing: 0.09em;
   }
+
+  .day-name {
+    font-size: 1.5rem;
+  }
+
+  .tl-item {
+    grid-template-columns: 4.2rem 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .terrain::before,
+  .hero-grain {
+    opacity: 0.08;
+  }
+}
