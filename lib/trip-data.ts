@@ -372,14 +372,14 @@ export const tripData: TripData = {
   planningSummary,
   host: {
     name: "Calid",
-    role: "Founder of Sofound",
-    journeyLength: "14 months traveling solo",
-    journeyReach: "17 countries across Africa and the Middle East",
+    role: "Founder and your host, Sofound Travel Group",
+    journeyLength: "More than 18 months traveling independently",
+    journeyReach: "22 countries, including 17 African countries",
     quote:
-      "Travel at its best does more than move you across a map. It can change how you move through the world.",
+      "I’ll host the journey. Local people will lead you into the place.",
     paragraphs: [
-      "I spent 14 months traveling solo across 17 countries in Africa and the Middle East. The landscapes mattered. The freedom mattered. But the most fulfilling moments usually came down to people and access: the invitation I could not have booked, the stranger who became a guide, the meal that became a lesson, and the version of myself I met far from routine.",
-      "I created Sofound to preserve the freedom of independent travel while adding what can be extraordinary to find alone: a community that has your back, the confidence to try what once felt out of reach, cultural access shaped by local people, room to exhale, and space to reflect.",
+      "I’ve spent more than 18 months traveling independently through 22 countries—including 14 months backpacking across 17 African countries. The landscapes mattered. The freedom mattered. But the most fulfilling moments usually came down to people and access: the invitation I could not have booked, the stranger who became a guide, the meal that became a lesson, and the version of myself I met far from routine.",
+      "I created Sofound to preserve the freedom of independent travel while making more room for what can be difficult to find alone: a community that has your back, the confidence to try what once felt out of reach, cultural access shaped by local people, room to exhale, and space to reflect. This Brazil journey brings that idea to life through locally led experiences, shared adventure, and thoughtful support—with me present from preparation through return.",
     ],
   },
   organizer: {

@@ -2,87 +2,74 @@ import Image from "next/image";
 
 import { tripData } from "@/lib/trip-data";
 
-const hostStages = [
+const hostFacts = [
   {
-    title: "Before departure",
-    copy: "Clear pre-trip guidance by email and/or text, arrival-planning support, important updates, and roommate-preference coordination—so you feel prepared, not overwhelmed.",
+    value: "18+",
+    label: "months traveling independently",
   },
   {
-    title: "In Brazil",
-    copy: "Calid is present from the first welcome to the final goodbye as founder-host and community steward, while local experiences are led by local hosts and operators.",
+    value: "22",
+    label: "countries experienced firsthand",
   },
   {
-    title: "After we return",
-    copy: "The group comes together once more for a post-trip reunion call—a chance to reconnect, revisit the journey, and carry its best parts forward.",
+    value: "14 months",
+    label: "backpacking across 17 African countries",
   },
 ];
 
 export function HostSection() {
   return (
-    <section className="host-section section-pad" aria-labelledby="host-title">
+    <section
+      className="host-section section-pad terrain"
+      aria-labelledby="host-title"
+    >
       <div className="section-shell host-shell">
-        <div className="host-copy">
-          <p className="kicker kicker-light">Meet the host</p>
+        <header className="host-header">
+          <p className="kicker kicker-light">Meet Calid</p>
           <h2 id="host-title">
-            Built from 14 months of learning what makes a journey stay with you.
+            The best parts of travel are rarely the parts you can book.
           </h2>
-          {tripData.host.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-          <p className="host-signoff">— {tripData.host.name}, {tripData.host.role}</p>
-          <blockquote>{tripData.host.quote}</blockquote>
-        </div>
+        </header>
 
-        <figure className="host-gallery-wrap">
-          <div className="host-gallery">
-            <div className="host-photo host-photo-wide">
-              <Image
-                unoptimized
-                src={tripData.assets.hostCommunity}
-                alt="Calid with a community during his extended solo journey"
-                fill
-                sizes="(min-width: 900px) 43vw, 84vw"
-              />
-            </div>
-            <div className="host-photo host-photo-tall">
-              <Image
-                unoptimized
-                src={tripData.assets.hostOverlook}
-                alt="Calid seated at a mountain overlook during his travels"
-                fill
-                sizes="(min-width: 900px) 21vw, 84vw"
-              />
-            </div>
-            <div className="host-photo host-photo-tall">
+        <div className="host-story">
+          <figure className="host-portrait">
+            <div className="host-photo-frame">
               <Image
                 unoptimized
                 src={tripData.assets.hostConnection}
-                alt="Calid seated with a travel connection during his journey"
+                alt="Calid, founder and host of Sofound, seated with a friend during his travels"
                 fill
-                sizes="(min-width: 900px) 21vw, 84vw"
+                sizes="(min-width: 900px) 38vw, 100vw"
               />
             </div>
-          </div>
-          <figcaption>
-            Calid during his 14-month solo journey across 17 countries in
-            Africa and the Middle East.
-          </figcaption>
-        </figure>
-      </div>
+            <figcaption>
+              Calid during more than 18 months of independent travel.
+            </figcaption>
+          </figure>
 
-      <div className="section-shell host-stages-wrap">
-        <div className="host-stages-heading">
-          <p className="kicker kicker-light">On this journey</p>
-          <h3>Hosted from before takeoff to after you return.</h3>
+          <div className="host-narrative">
+            {tripData.host.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+            <p className="host-signoff">
+              <strong>{tripData.host.name}</strong>
+              <span>{tripData.host.role}</span>
+            </p>
+          </div>
         </div>
-        <div className="horizontal-shelf host-stages" tabIndex={0} aria-label="Host support stages">
-          {hostStages.map((stage, index) => (
-            <article key={stage.title}>
-              <span>0{index + 1}</span>
-              <h4>{stage.title}</h4>
-              <p>{stage.copy}</p>
-            </article>
+
+        <dl className="host-proof" aria-label="Calid's travel experience">
+          {hostFacts.map((fact) => (
+            <div key={fact.value}>
+              <dt>{fact.value}</dt>
+              <dd>{fact.label}</dd>
+            </div>
           ))}
+        </dl>
+
+        <div className="host-promise">
+          <p className="kicker kicker-light">Founder-hosted · locally led</p>
+          <blockquote>{tripData.host.quote}</blockquote>
         </div>
       </div>
     </section>
