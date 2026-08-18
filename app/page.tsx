@@ -12,10 +12,7 @@ import {
   TwoRhythmsSection,
   WhySofoundExists,
 } from "@/components/sections/JourneySections";
-import {
-  BookWithConfidence,
-  PricingSection,
-} from "@/components/sections/PricingSection";
+import { PricingSection } from "@/components/sections/PricingSection";
 
 export default function Home() {
   return (
@@ -32,7 +29,6 @@ export default function Home() {
         <InclusionsSection />
         <HostSection />
         <PricingSection />
-        <BookWithConfidence />
         <FAQSection />
         <FinalCTA />
       </main>
