@@ -77,36 +77,32 @@ export function PricingSection() {
           })}
         </div>
 
-        <div className="planning-heading">
-          <p className="kicker kicker-light">Plan separately</p>
-          <p>
-            These categories are outside the confirmed trip price. No estimates
-            are shown because traveler choices and fares vary.
-          </p>
-        </div>
-        <div className="planning-costs" aria-label="Costs to plan separately">
-          {tripData.planningSummary.map((item) => (
-            <div className="planning-cost-item" key={item.label}>
-              <span>{item.label}</span>
-              <strong>{item.status}</strong>
-              <small>{item.description}</small>
+        <div className="pricing-fineprint">
+          <div
+            className="pricing-planning-bar"
+            aria-label="Costs to plan separately"
+          >
+            <div className="pricing-plan-stat">
+              <span>Plan separately</span>
+              <strong>~ $600</strong>
+              <small>Round-trip airfare</small>
             </div>
-          ))}
-        </div>
+            <div className="pricing-plan-stat">
+              <span>Personal budget</span>
+              <strong>~ $440</strong>
+              <small>Recommended spending money</small>
+            </div>
+            <p>
+              These planning estimates are not included in the package total.
+              Actual costs vary by departure city and personal choices.
+            </p>
+          </div>
 
-        <div className="package-inclusions-heading">
-          <p className="kicker kicker-light">Confirm your package</p>
-          <h3>Open only what you need to compare.</h3>
-        </div>
-        <div className="package-inclusion-grid">
-          <details open>
-            <summary>
-              Rio Core includes
-              <span aria-hidden="true">+</span>
-            </summary>
-            <div className="package-detail-body">
+          <div className="pricing-comparison-grid">
+            <section aria-labelledby="rio-core-includes-title">
+              <h3 id="rio-core-includes-title">Rio Core includes</h3>
               {rioCoreInclusionGroups.map((group) => (
-                <div key={group.title}>
+                <div className="pricing-comparison-group" key={group.title}>
                   <h4>{group.title}</h4>
                   <ul>
                     {group.items.map((item) => (
@@ -115,16 +111,11 @@ export function PricingSection() {
                   </ul>
                 </div>
               ))}
-            </div>
-          </details>
-          <details>
-            <summary>
-              Complete Journey adds
-              <span aria-hidden="true">+</span>
-            </summary>
-            <div className="package-detail-body package-detail-body-single">
+            </section>
+            <section aria-labelledby="complete-journey-adds-title">
+              <h3 id="complete-journey-adds-title">Complete Journey adds</h3>
               {completeAdditionGroups.map((group) => (
-                <div key={group.title}>
+                <div className="pricing-comparison-group" key={group.title}>
                   <h4>{group.title}</h4>
                   <ul>
                     {group.items.map((item) => (
@@ -133,8 +124,16 @@ export function PricingSection() {
                   </ul>
                 </div>
               ))}
-            </div>
-          </details>
+            </section>
+            <section aria-labelledby="not-included-title">
+              <h3 id="not-included-title">Not included</h3>
+              <ul>
+                {tripData.exclusions.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </section>
+          </div>
         </div>
 
         <p className="pricing-disclosure">
