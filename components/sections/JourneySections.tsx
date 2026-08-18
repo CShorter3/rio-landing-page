@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { Reveal } from "@/components/ui/Reveal";
-import { formatUsd, journeyList, tripData } from "@/lib/trip-data";
+import { formatUsd, journeyList } from "@/lib/trip-data";
 
 export function JourneyAtAGlance() {
   return (
@@ -116,85 +116,9 @@ export function WhySofoundExists() {
   );
 }
 
-export function TwoRhythmsSection() {
-  const rio = tripData.packages["rio-core"];
-  const complete = tripData.packages["complete-journey"];
-
-  return (
-    <section
-      className="rhythms-section terrain tv-static section-pad"
-      id="journey"
-      aria-labelledby="rhythms-title"
-    >
-      <div className="section-shell">
-        <Reveal className="rhythms-heading">
-          <p className="kicker kicker-light">Two rhythms. One complete journey.</p>
-          <h2 id="rhythms-title">Rio brings the energy. Bahia brings you closer.</h2>
-        </Reveal>
-
-        <div className="rhythms-grid">
-          <article className="rhythm rhythm-rio">
-            <p className="rhythm-label">Rio wakes you up</p>
-            <h3>Rio Core is the trip.</h3>
-            <p>
-              The journey begins in Rio: a city of coastline, movement, music,
-              and shared energy. Spend time on the water, along the beaches, and
-              in the landscapes that shape the city—then move beyond the
-              postcard through locally led food, culture, and heritage
-              experiences.
-            </p>
-            <p>
-              When evening arrives, Rio opens up in a different way: live music,
-              nightlife, and the kind of spontaneous shared moments that turn a
-              new group into a real community.
-            </p>
-            <div className="rhythm-facts">
-              <strong>{rio.dates}</strong>
-              <span>
-                {formatUsd(rio.total)} total · {formatUsd(rio.deposit)} deposit
-              </span>
-            </div>
-          </article>
-
-          <article className="rhythm rhythm-bahia">
-            <p className="rhythm-label">Salvador, Bahia takes you deeper</p>
-            <h3>For a smaller group, Bahia is the upgrade.</h3>
-            <p>
-              Rio’s outward energy gives way to a more intimate continuation
-              shaped by Afro-Brazilian culture, regional food, local context,
-              tropical coastline, and more room to exhale.
-            </p>
-            <p>
-              The confirmed package includes the flight from Rio to Salvador,
-              four nights of shared accommodation, one included massage, and a
-              founder-hosted continuation for up to six travelers.
-            </p>
-            <p className="development-note">
-              <strong>Itinerary in development:</strong> exact cultural
-              activities, hosts, venues, and Black Consciousness Day programming
-              will be shared once confirmed.
-            </p>
-            <div className="rhythm-facts">
-              <strong>{complete.dates}</strong>
-              <span>
-                {formatUsd(complete.total)} total ·{" "}
-                {formatUsd(complete.deposit)} deposit
-              </span>
-            </div>
-          </article>
-        </div>
-
-        <blockquote className="rhythms-quote">
-          Rio gives you the momentum. Bahia gives you the depth.
-        </blockquote>
-      </div>
-    </section>
-  );
-}
-
 export function SofoundHouseSection() {
   return (
-    <section className="house-section section-pad" aria-labelledby="house-title">
+    <section id="house" className="house-section section-pad" aria-labelledby="house-title">
       <div className="section-shell">
         <div className="house-heading">
           <div>
@@ -202,84 +126,103 @@ export function SofoundHouseSection() {
             <h2 id="house-title">More than accommodation. A home base for the journey.</h2>
           </div>
           <p>
-            The Sofound House brings the group together in a boutique,
-            shared-home atmosphere—where mornings begin and the unplanned
-            moments become part of the trip.
+            Shared living is part of the experience: a place to land, reset,
+            and become familiar before the next day begins.
           </p>
         </div>
 
-        <div className="house-grid">
-          <article>
-            <span aria-hidden="true">01</span>
-            <h3>Living together</h3>
-            <p>
-              Before departure, Calid will coordinate roommate preferences
-              using requests from friends and couples, gender preferences,
-              quiet or social room styles, and cleanliness and tidiness habits.
-            </p>
-          </article>
-          <article>
-            <span aria-hidden="true">02</span>
-            <h3>The Daily Gather</h3>
-            <p>
-              At some point each day, we come together to check in, reflect,
-              journal, or simply reconnect—giving the journey a shared rhythm
-              without asking everyone to process it the same way.
-            </p>
-          </article>
-          <article>
-            <span aria-hidden="true">03</span>
-            <h3>The reflection space</h3>
-            <p>
-              A dedicated space for journaling, decompressing, guided prompts,
-              and taking a quiet moment. Every traveler receives a Sofound
-              journal; sharing from it is always optional.
-            </p>
-          </article>
-        </div>
+        <div className="house-editorial">
+          <div className="house-media">
+            <figure className="house-media-feature">
+              <Image
+                src="/images/sofound-house/exterior.jpg"
+                alt="Glass-roofed courtyard with stained-glass windows in a Rio home"
+                fill
+                unoptimized
+                sizes="(max-width: 767px) 100vw, 55vw"
+              />
+            </figure>
+            <figure className="house-media-support">
+              <Image
+                src="/images/sofound-house/living.jpg"
+                alt="Warm living room arranged for shared gathering"
+                fill
+                unoptimized
+                sizes="(max-width: 767px) 50vw, 27vw"
+              />
+            </figure>
+            <figure className="house-media-support">
+              <Image
+                src="/images/sofound-house/bedroom.jpg"
+                alt="Bedroom with natural light and simple furnishings"
+                fill
+                unoptimized
+                sizes="(max-width: 767px) 50vw, 27vw"
+              />
+            </figure>
+          </div>
 
-        <div className="house-gallery" aria-label="The confirmed Sofound House in Copacabana">
-          <figure className="house-gallery-feature">
-            <Image
-              src="/images/sofound-house/exterior.jpg"
-              alt="Glass-roofed courtyard with stained-glass windows at the Sofound House"
-              fill
-              unoptimized
-              sizes="(max-width: 760px) 100vw, 58vw"
-            />
-          </figure>
-          <figure>
-            <Image
-              src="/images/sofound-house/living.jpg"
-              alt="Living room inside the Sofound House"
-              fill
-              unoptimized
-              sizes="(max-width: 760px) 50vw, 21vw"
-            />
-          </figure>
-          <figure>
-            <Image
-              src="/images/sofound-house/pool.jpg"
-              alt="Pool area at the Sofound House"
-              fill
-              unoptimized
-              sizes="(max-width: 760px) 50vw, 21vw"
-            />
-          </figure>
-          <p className="house-gallery-caption">
-            The confirmed Copacabana home base for the Rio portion of the journey.
-          </p>
-        </div>
+          <div className="house-story">
+            <p className="house-story-intro">
+              The house is where a group of travelers begins to feel like a
+              community—without turning every quiet moment into a group
+              activity.
+            </p>
 
-        <div className="rooming-note">
-          <strong>Transparent rooming note</strong>
-          <p>
-            Exact bedroom, bed, and bathroom arrangements depend on the final
-            property. Preferences are thoughtfully coordinated and prioritized,
-            but not guaranteed. Final property and room-configuration details
-            will be shared once confirmed.
-          </p>
-          <Link href="#faq">Read rooming FAQs</Link>
+            <div className="house-values">
+              <article>
+                <span aria-hidden="true">01</span>
+                <div>
+                  <h3>Belong without performing</h3>
+                  <p>
+                    Come solo, with a friend, or with a partner. Calid
+                    coordinates roommate preferences before departure so the
+                    shared experience starts with more context and care.
+                  </p>
+                </div>
+              </article>
+              <article>
+                <span aria-hidden="true">02</span>
+                <div>
+                  <h3>Gather, then make room</h3>
+                  <p>
+                    Daily Gathers create a shared rhythm for checking in,
+                    journaling, or reconnecting. Personal writing and personal
+                    sharing always remain optional.
+                  </p>
+                </div>
+              </article>
+              <article>
+                <span aria-hidden="true">03</span>
+                <div>
+                  <h3>Return somewhere restorative</h3>
+                  <p>
+                    Between Rio’s early mornings and late-night options, the
+                    house gives the group a familiar place to rest, reset, and
+                    let the unplanned moments happen.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div className="house-confirmation" aria-labelledby="house-confirmed-title">
+              <p className="kicker kicker-light" id="house-confirmed-title">
+                Confirmed in Rio Core
+              </p>
+              <ul>
+                <li>Shared Sofound House accommodation in Rio</li>
+                <li>Roommate-preference coordination before departure</li>
+                <li>Daily Gathers and a Sofound journal</li>
+              </ul>
+              <p className="house-disclosure">
+                Property photography is illustrative until the final home,
+                bedroom, bed, and bathroom configuration is confirmed.
+                Preferences are prioritized but cannot guarantee a particular
+                roommate or room type.
+              </p>
+              <Link href="#faq">Read the rooming and lodging FAQs</Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>

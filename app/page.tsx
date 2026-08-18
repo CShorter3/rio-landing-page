@@ -1,4 +1,3 @@
-import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { TripJsonLd } from "@/components/seo/TripJsonLd";
 import { FAQSection } from "@/components/sections/FAQSection";
@@ -9,7 +8,6 @@ import { InclusionsSection } from "@/components/sections/InclusionsSection";
 import { ItinerarySection } from "@/components/sections/ItinerarySection";
 import {
   SofoundHouseSection,
-  TwoRhythmsSection,
   WhySofoundExists,
 } from "@/components/sections/JourneySections";
 import { PricingSection } from "@/components/sections/PricingSection";
@@ -23,16 +21,14 @@ export default function Home() {
         <HeroSection />
         {/* Temporarily hidden for review: JourneyAtAGlance stats section. */}
         <WhySofoundExists />
-        <TwoRhythmsSection />
-        <SofoundHouseSection />
         <ItinerarySection />
         <InclusionsSection />
-        <HostSection />
+        <SofoundHouseSection />
         <PricingSection />
+        <HostSection />
         <FAQSection />
         <FinalCTA />
       </main>
-      <SiteFooter />
       <StickyMobileCTA />
     </>
   );
