@@ -4,8 +4,8 @@ import { tripData } from "@/lib/trip-data";
 
 const hostFacts = [
   {
-    value: "18+",
-    label: "months learning how pace, access, and spontaneity change a journey",
+    value: "2",
+    label: "years learning how pace, access, and spontaneity revolutizes a journey",
   },
   {
     value: "22",
