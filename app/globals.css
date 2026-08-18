@@ -1000,6 +1000,29 @@ h3 {
   font-size: 1.05rem;
 }
 
+.premium-extension-header {
+  grid-template-columns: 1fr;
+  margin-top: clamp(6rem, 9vw, 7.5rem);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.premium-extension-copy {
+  max-width: 780px;
+  margin-top: 1.35rem;
+  color: var(--dusty-green);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.premium-extension-assurance {
+  margin-top: 0.9rem;
+  color: var(--peach);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .itinerary-legend {
   display: flex;
   justify-content: flex-end;
@@ -1217,60 +1240,118 @@ h3 {
 
 .salvador-section {
   position: relative;
-  margin-top: clamp(4.5rem, 9vw, 8rem);
   overflow: hidden;
+  border: 1px solid rgba(212, 130, 92, 0.34);
   background: var(--espresso-deep);
   color: var(--off-white);
-  padding-block: clamp(4.5rem, 8vw, 8rem);
+}
+
+.salvador-section::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 248, 236, 0.18) 0.45px, transparent 0.45px);
+  background-size: 4px 4px;
+  content: "";
+  opacity: 0.04;
+  pointer-events: none;
 }
 
 .salvador-terrain {
   position: absolute;
+  z-index: 0;
   inset: 0;
-  opacity: 0.22;
   background-image:
-    repeating-radial-gradient(at 104% 5%, transparent 0 22px, rgba(212, 130, 92, 0.52) 23px 24px, transparent 25px 39px),
-    repeating-radial-gradient(at -4% 88%, transparent 0 28px, rgba(122, 138, 99, 0.45) 29px 30px, transparent 31px 47px);
+    repeating-radial-gradient(at 104% 5%, transparent 0 26px, rgba(212, 130, 92, 0.8) 27px 28px, transparent 29px 46px),
+    repeating-radial-gradient(at -4% 88%, transparent 0 34px, rgba(122, 138, 99, 0.7) 35px 36px, transparent 37px 56px);
   mask-image: linear-gradient(90deg, #000, transparent 42% 60%, #000);
+  opacity: 0.09;
+  pointer-events: none;
 }
 
-.salvador-shell { position: relative; z-index: 1; }
+.salvador-shell {
+  --salvador-panel-gutter: clamp(2.25rem, 4.5vw, 3rem);
 
-.premium-extension-label {
-  margin-bottom: 1.5rem;
-  color: var(--peach);
-  font-family: var(--font-manrope), Arial, sans-serif;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  padding: 3rem var(--salvador-panel-gutter) 0;
 }
 
-.experience-heading {
+.salvador-hero {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: clamp(2rem, 7vw, 7rem);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(3.5rem, 6vw, 4.5rem);
   align-items: end;
-  margin-bottom: clamp(3rem, 6vw, 4rem);
+  padding-bottom: 3rem;
 }
 
-.experience-heading h3 { margin-top: 0.8rem; max-width: 760px; font-size: clamp(3rem, 5.6vw, 6rem); }
-.experience-heading > p { max-width: 540px; color: var(--dusty-green); font-size: 1.05rem; }
+.salvador-hero h3 {
+  max-width: 680px;
+  margin-top: 0.9rem;
+  font-size: clamp(3.15rem, 5.1vw, 4.8rem);
+  line-height: 0.92;
+}
+
+.salvador-hero > p {
+  max-width: 470px;
+  color: var(--dusty-green);
+  font-size: 1rem;
+  line-height: 1.7;
+}
 
 .salvador-days { display: grid; border-top: 1px solid rgba(255, 248, 236, 0.18); }
 
-.salvador-days article {
+.salvador-day-row {
   display: grid;
-  grid-template-columns: 8rem minmax(12rem, 0.8fr) 1.2fr;
-  gap: 1.5rem;
-  align-items: baseline;
-  padding: 1.65rem 0;
+  grid-template-columns: minmax(300px, 0.42fr) minmax(0, 0.58fr);
+  gap: clamp(2.5rem, 5vw, 3.5rem);
+  align-items: center;
+  padding: clamp(1.9rem, 3vw, 2.25rem) 0;
   border-bottom: 1px solid rgba(255, 248, 236, 0.18);
 }
 
-.salvador-days article > span,
-.consciousness-callout p,
-.inline-reserve span {
+.salvador-day-image {
+  position: relative;
+  display: flex;
+  aspect-ratio: 3 / 2;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border: 1px solid rgba(212, 130, 92, 0.58);
+  background-position: center;
+  background-size: cover;
+  padding: 1.35rem;
+  isolation: isolate;
+}
+
+.salvador-day-image::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 12, 8, 0.08) 18%, rgba(20, 12, 8, 0.82) 100%);
+  content: "";
+}
+
+.salvador-day-image-arrival {
+  background-image: url("/images/sofound-house/living.jpg");
+}
+
+.salvador-day-image-water {
+  background-image: url("/images/sofound-hero-desktop.webp");
+  background-position: center 54%;
+}
+
+.salvador-day-image-invitation {
+  background-image: url("/images/sofound-house/bedroom.jpg");
+}
+
+.salvador-day-image-consciousness {
+  background-image: url("/images/sofound-house/exterior.jpg");
+}
+
+.salvador-day-image > span,
+.black-consciousness-highlight > p,
+.complete-journey-cta span {
   color: var(--peach);
   font-size: 0.68rem;
   font-weight: 700;
@@ -1278,41 +1359,91 @@ h3 {
   text-transform: uppercase;
 }
 
-.salvador-days h3 { font-size: clamp(1.7rem, 2.8vw, 2.6rem); }
-.salvador-days article > p { color: var(--dusty-green); font-size: 0.9rem; line-height: 1.55; }
-
-.consciousness-callout {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: clamp(1.25rem, 4vw, 2.25rem);
-  margin-top: clamp(2.75rem, 5vw, 4rem);
-  background: var(--terracotta);
+.salvador-day-image h4 {
+  max-width: 92%;
   color: var(--off-white);
-  padding: clamp(1.5rem, 4vw, 2.5rem);
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(1.9rem, 3vw, 2.25rem);
+  font-weight: 500;
+  line-height: 0.95;
 }
 
-.callout-date { display: grid; align-content: start; line-height: 0.8; }
-.callout-date span { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
-.callout-date strong { font-family: var(--font-cormorant), Georgia, serif; font-size: clamp(3.7rem, 7vw, 6rem); }
-.consciousness-callout p { color: var(--off-white); opacity: 0.8; }
-.consciousness-callout h3 { max-width: 760px; margin-top: 0.65rem; font-size: clamp(2rem, 3.3vw, 3.6rem); }
-.consciousness-callout div > span { display: block; max-width: 760px; margin-top: 1rem; color: rgba(255, 248, 236, 0.84); font-size: 0.88rem; }
+.salvador-day-description h4 {
+  max-width: 580px;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(2rem, 3vw, 2.65rem);
+  font-weight: 500;
+  line-height: 1;
+}
 
-.inline-reserve {
+.salvador-day-description p {
+  max-width: 600px;
+  margin-top: 1rem;
+  color: var(--dusty-green);
+  font-size: 0.93rem;
+  line-height: 1.7;
+}
+
+.black-consciousness-highlight {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  background: var(--terracotta);
+  color: var(--off-white);
+  padding: clamp(1.75rem, 4vw, 2.25rem);
+}
+
+.black-consciousness-highlight > p { color: var(--off-white); opacity: 0.82; }
+
+.black-consciousness-highlight > div {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(1.4rem, 4vw, 2.5rem);
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.black-consciousness-highlight strong {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(4.5rem, 8vw, 7rem);
+  font-weight: 500;
+  line-height: 0.72;
+}
+
+.black-consciousness-highlight h3 {
+  max-width: 760px;
+  font-size: clamp(2.1rem, 3.7vw, 3.6rem);
+  line-height: 0.95;
+}
+
+.black-consciousness-highlight span {
+  display: block;
+  max-width: 760px;
+  margin-top: 1rem;
+  color: rgba(255, 248, 236, 0.86);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.complete-journey-cta {
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
   align-items: center;
-  margin-top: clamp(3.5rem, 7vw, 5rem);
-  border: 1px solid rgba(255, 248, 236, 0.23);
-  background: var(--black-glass);
-  padding: 1.35rem clamp(1.3rem, 3vw, 2rem);
+  margin: clamp(2rem, 4vw, 3rem) calc(-1 * var(--salvador-panel-gutter)) 0;
+  border-top: 1px solid rgba(255, 248, 236, 0.2);
+  background: rgba(9, 7, 5, 0.66);
+  padding: 1.65rem var(--salvador-panel-gutter);
 }
 
-.inline-reserve strong { display: block; margin-top: 0.35rem; font-size: clamp(1rem, 2vw, 1.3rem); }
-.inline-reserve .button { flex: 0 0 auto; }
+.complete-journey-cta strong {
+  display: block;
+  max-width: 650px;
+  margin-top: 0.35rem;
+  font-size: clamp(0.95rem, 2vw, 1.2rem);
+}
 
-.itinerary-disclaimer {
+.complete-journey-cta .button { flex: 0 0 auto; }
+
+.extension-disclaimer {
   max-width: 940px;
   margin: 1.25rem auto 0;
   color: rgba(255, 248, 236, 0.46);
@@ -2921,28 +3052,96 @@ h3 {
 
   .house-gallery-feature { grid-column: 1 / -1; }
 
-  .salvador-section {
+  .premium-extension-header {
     margin-top: 4rem;
-    padding-block: 4rem;
+    margin-bottom: 1.75rem;
   }
 
-  .salvador-days article {
+  .premium-extension-copy {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .premium-extension-assurance {
+    font-size: 0.61rem;
+    line-height: 1.55;
+  }
+
+  .salvador-shell {
+    --salvador-panel-gutter: 1.35rem;
+
+    padding-top: 2.75rem;
+  }
+
+  .salvador-hero {
     grid-template-columns: 1fr;
-    gap: 0.55rem;
-    padding: 1.4rem 0;
+    gap: 1.25rem;
+    padding-bottom: 2.5rem;
   }
 
-  .salvador-days h3 { font-size: 2rem; }
+  .salvador-hero h3 {
+    font-size: clamp(2.65rem, 12vw, 3.15rem);
+  }
 
-  .consciousness-callout {
+  .salvador-hero > p {
+    font-size: 0.9rem;
+  }
+
+  .salvador-day-row {
     grid-template-columns: 1fr;
-    gap: 0.8rem;
+    gap: 1.15rem;
+    padding: 1.65rem 0;
   }
 
-  .callout-date { grid-template-columns: auto auto; align-items: end; gap: 0.5rem; }
+  .salvador-day-image {
+    padding: 1.2rem;
+  }
 
-  .inline-reserve { align-items: stretch; flex-direction: column; }
-  .inline-reserve .button { width: 100%; }
+  .salvador-day-image h4 {
+    font-size: clamp(1.85rem, 8.2vw, 2.15rem);
+  }
+
+  .salvador-day-description h4 {
+    font-size: 2.05rem;
+  }
+
+  .salvador-day-description p {
+    margin-top: 0.75rem;
+    font-size: 0.88rem;
+  }
+
+  .black-consciousness-highlight {
+    padding: 1.45rem;
+  }
+
+  .black-consciousness-highlight > div {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .black-consciousness-highlight strong {
+    font-size: 5rem;
+  }
+
+  .black-consciousness-highlight h3 {
+    font-size: 2.35rem;
+  }
+
+  .complete-journey-cta {
+    align-items: stretch;
+    flex-direction: column;
+    padding-block: 1.5rem;
+  }
+
+  .complete-journey-cta .button {
+    width: 100%;
+    min-height: 3.25rem;
+  }
+
+  .extension-disclaimer {
+    padding-inline: 0.4rem;
+    line-height: 1.55;
+  }
 
   .included-grid {
     grid-template-columns: 1fr;
@@ -3199,32 +3398,3 @@ h3 {
     font-size: 0.52rem;
     letter-spacing: 0.09em;
   }
-
-  .day-name {
-    font-size: 1.5rem;
-  }
-
-  .tl-item {
-    grid-template-columns: 4.2rem 1fr;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-  }
-
-  .terrain::before,
-  .hero-grain {
-    opacity: 0.08;
-  }
-}
