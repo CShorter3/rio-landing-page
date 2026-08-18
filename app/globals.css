@@ -3078,33 +3078,34 @@ h3 {
   }
 
   .included-grid {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.35rem;
+    margin-top: 2rem;
   }
 
   .included-item {
-    min-height: auto;
-    padding: 1.2rem;
+    min-height: 13.25rem;
+    padding: 1.1rem;
+  }
+
+  .included-icon {
+    min-height: 2.05rem;
+    font-size: 1.65rem;
+  }
+
+  .included-title {
+    margin-top: 1.05rem;
+    font-size: 0.88rem;
+  }
+
+  .included-desc {
+    margin-top: 0.45rem;
+    font-size: 0.72rem;
+    line-height: 1.48;
   }
 
   .inclusions-heading .section-intro {
     margin-top: 1rem;
-  }
-
-  .included-detail-drawer > summary {
-    padding-inline: 1rem;
-  }
-
-  .included-detail-columns {
-    grid-template-columns: 1fr;
-  }
-
-  .included-detail-rio {
-    grid-column: auto;
-  }
-
-  .included-detail-column {
-    padding: 1.15rem;
   }
 
   .pricing-planning-bar {
@@ -3331,6 +3332,12 @@ h3 {
 
   .tl-item {
     grid-template-columns: 4.2rem 1fr;
+  }
+}
+
+@media (max-width: 460px) {
+  .included-grid {
+    grid-template-columns: 1fr;
   }
 }
 
