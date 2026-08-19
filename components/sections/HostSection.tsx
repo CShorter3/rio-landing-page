@@ -59,7 +59,7 @@ export function HostSection() {
               </figcaption>
             </figure>
 
-            <div className="host-promise">
+            {/* <div className="host-promise">
               <p className="kicker kicker-light">
                 Founder-hosted · locally led
               </p>
@@ -73,7 +73,7 @@ export function HostSection() {
                   <dd>{fact.label}</dd>
                 </div>
               ))}
-            </dl>
+            </dl> */}
           </aside>
         </div>
       </div>
