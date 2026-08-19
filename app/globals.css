@@ -1632,7 +1632,7 @@ h3 {
 
 .host-narrative {
   max-width: 42rem;
-  padding-top: clamp(0rem, 2vw, 1.5rem);
+  padding-top: clamp(0rem, 0tvw, 1.5rem);
 }
 
 .host-narrative > p:not(.host-signoff) {
@@ -1641,7 +1641,8 @@ h3 {
   line-height: 1.85;
 }
 
-.host-narrative > p:first-child {
+.host-narrative > p:first-child,
+.host-narrative > p:nth-child(2) {
   color: var(--off-white);
   font-family: var(--font-cormorant), Georgia, serif;
   font-size: clamp(1.5rem, 2.2vw, 2rem);

@@ -4,8 +4,8 @@ import { tripData } from "@/lib/trip-data";
 
 const hostFacts = [
   {
-    value: "18+",
-    label: "months learning how pace, access, and spontaneity change a journey",
+    value: "2",
+    label: "years learning how pace, access, and spontaneity revolutizes a journey",
   },
   {
     value: "22",
@@ -26,9 +26,9 @@ export function HostSection() {
     >
       <div className="section-shell host-shell">
         <header className="host-header">
-          <p className="kicker kicker-light">Meet Calid</p>
+          <p className="kicker kicker-light">Meet the host</p>
           <h2 id="host-title">
-            The best parts of travel are rarely the parts you can book.
+            Beyond routine, there is a version of life you have not met yet.
           </h2>
         </header>
 
@@ -59,7 +59,7 @@ export function HostSection() {
               </figcaption>
             </figure>
 
-            <div className="host-promise">
+            {/* <div className="host-promise">
               <p className="kicker kicker-light">
                 Founder-hosted · locally led
               </p>
@@ -73,7 +73,7 @@ export function HostSection() {
                   <dd>{fact.label}</dd>
                 </div>
               ))}
-            </dl>
+            </dl> */}
           </aside>
         </div>
       </div>
