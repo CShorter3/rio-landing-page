@@ -83,8 +83,8 @@ export function ItinerarySection() {
 
           <div className="journey-context-grid">
             <article>
-              <p className="journey-context-label">01 · Rio wakes you up</p>
-              <h3>Rio Core is the trip.</h3>
+              <p className="journey-context-label">The core experience · 5 Nights</p>
+              <h3>Rio de Janeiro</h3>
               <p>
                 Coastline, movement, music, and shared energy shape the five
                 nights. Time on the water and in Rio’s landscapes meets locally
@@ -95,9 +95,9 @@ export function ItinerarySection() {
             </article>
             <article>
               <p className="journey-context-label">
-                02 · Salvador, Bahia takes you deeper
+                Optional Extension · 4 additional nights
               </p>
-              <h3>Bahia is the optional upgrade.</h3>
+              <h3>Salvador, Bahia</h3>
               <p>
                 For up to six continuing travelers, Rio’s outward energy gives
                 way to a more intimate rhythm shaped by Afro-Brazilian culture,
