@@ -91,7 +91,7 @@ export function ItinerarySection() {
                 led food, culture, heritage, and optional nightlife—the kind of
                 mix that turns a new group into a real community.
               </p>
-              <strong>November 12–17 · 5 nights · complete on its own</strong>
+              {/* <strong>November 12–17 · 5 nights · complete on its own</strong> */}
             </article>
             <article>
               <p className="journey-context-label">
@@ -104,7 +104,7 @@ export function ItinerarySection() {
                 regional food, local context, tropical coastline, and more room
                 to exhale.
               </p>
-              <strong>November 17–21 · 4 additional nights</strong>
+              {/* <strong>November 17–21 · 4 additional nights</strong> */}
             </article>
           </div>
 
