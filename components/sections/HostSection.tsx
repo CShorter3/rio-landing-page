@@ -26,7 +26,7 @@ export function HostSection() {
     >
       <div className="section-shell host-shell">
         <header className="host-header">
-          <p className="kicker kicker-light">Meet Calid</p>
+          <p className="kicker kicker-light">Meet the host</p>
           <h2 id="host-title">
             Beyond routine, there is a version of life you have not met yet.
           </h2>
