@@ -100,9 +100,7 @@ export function ItinerarySection() {
               <h3>Salvador, Bahia</h3>
               <p>
                 For up to six continuing travelers, Rio’s outward energy gives
-                way to a more intimate rhythm shaped by Afro-Brazilian culture,
-                regional food, local context, tropical coastline, and more room
-                to exhale.
+                way to a more intimate rhythm shaped by Cobblestone streets, Afro-Brazilian culinary heritage, and relaxed island days.
               </p>
               {/* <strong>November 17–21 · 4 additional nights</strong> */}
             </article>
