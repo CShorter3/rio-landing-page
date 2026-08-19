@@ -28,7 +28,7 @@ export function HostSection() {
         <header className="host-header">
           <p className="kicker kicker-light">Meet Calid</p>
           <h2 id="host-title">
-            The best parts of travel are rarely the parts you can book.
+            Beyond routine, there is a version of life you have not met yet.
           </h2>
         </header>
 
