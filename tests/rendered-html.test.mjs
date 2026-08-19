@@ -44,8 +44,14 @@ test("renders the refactored conversion narrative", async () => {
   assert.match(html, /Two Ways to Join Us/i);
   assert.match(html, /Everyone begins in Rio/i);
   assert.match(html, /After day 5/i);
-  assert.match(html, /Rio Core ends here/i);
+  assert.match(html, /Rio Core ends complete/i);
   assert.match(html, /Optional 4-night extension/i);
+  assert.doesNotMatch(html, /journey-bridge-marker/i);
+  assert.equal(
+    (html.match(/class=["']journey-stop-marker["']/gi) ?? []).length,
+    2,
+    "journey overview should render exactly two timeline markers",
+  );
   assert.doesNotMatch(html, /up to six continuation travelers/i);
   assert.match(html, /Group Fit (?:&|&amp;) Vibe/i);
   assert.match(html, /Rio Core vs\. Salvador Extension/i);

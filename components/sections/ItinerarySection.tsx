@@ -77,7 +77,10 @@ export function ItinerarySection() {
             </p>
           </header>
 
-          <div className="journey-route" aria-label="Journey sequence">
+          <div
+            className="journey-route"
+            aria-label="Journey timeline: Rio Core and optional Salvador extension"
+          >
             <article className="journey-stop journey-stop-rio">
               <span className="journey-stop-marker" aria-hidden="true">01</span>
               <div className="journey-stop-copy">
@@ -89,19 +92,29 @@ export function ItinerarySection() {
                   and the nights that turn a new group into a real community.
                 </p>
                 <p className="journey-context-meta">November 12–17 · 5 nights</p>
+
+                <aside
+                  className="journey-decision"
+                  id="journey-decision"
+                  aria-label="Decision after Rio Core"
+                >
+                  <div>
+                    <p className="journey-context-label">
+                      After day 5 · Rio Core ends complete
+                    </p>
+                    <p>
+                      Return home with a complete experience—or continue north.
+                    </p>
+                  </div>
+                  <span aria-hidden="true">→</span>
+                </aside>
               </div>
             </article>
 
-            <div className="journey-bridge">
-              <span className="journey-bridge-marker" aria-hidden="true">→</span>
-              <p className="journey-context-label">After day 5</p>
-              <p>
-                <strong>Rio Core ends here.</strong> Return home with a complete
-                experience—or continue north with a smaller group.
-              </p>
-            </div>
-
-            <article className="journey-stop journey-stop-salvador">
+            <article
+              className="journey-stop journey-stop-salvador"
+              id="journey-salvador-overview"
+            >
               <span className="journey-stop-marker" aria-hidden="true">02</span>
               <div className="journey-stop-copy">
                 <p className="journey-context-label">
