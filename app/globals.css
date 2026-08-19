@@ -1632,7 +1632,7 @@ h3 {
 
 .host-narrative {
   max-width: 42rem;
-  padding-top: clamp(0rem, 0vw, 1.5rem);
+  padding-top: clamp(0rem, 0tvw, 1.5rem);
 }
 
 .host-narrative > p:not(.host-signoff) {
