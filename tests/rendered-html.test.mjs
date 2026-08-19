@@ -41,7 +41,12 @@ test("renders the refactored conversion narrative", async () => {
 
   assert.doesNotMatch(html, /<footer\b/i);
   assert.doesNotMatch(html, /class=["'][^"']*rhythms-section/i);
-  assert.match(html, /Rio is complete\. Bahia goes deeper\./i);
+  assert.match(html, /Two Ways to Join Us/i);
+  assert.match(html, /Everyone begins in Rio/i);
+  assert.match(html, /After day 5/i);
+  assert.match(html, /Rio Core ends here/i);
+  assert.match(html, /Optional 4-night extension/i);
+  assert.doesNotMatch(html, /up to six continuation travelers/i);
   assert.match(html, /Group Fit (?:&|&amp;) Vibe/i);
   assert.match(html, /Rio Core vs\. Salvador Extension/i);
   assert.match(html, /<details\b/i);
@@ -52,7 +57,7 @@ test("renders the refactored conversion narrative", async () => {
   );
 
   const pricingPosition = html.indexOf("Choose how deep you want to go");
-  const hostPosition = html.indexOf("Meet Calid");
+  const hostPosition = html.indexOf("Meet the host");
   assert.ok(pricingPosition >= 0, "pricing section should render");
-  assert.ok(hostPosition > pricingPosition, "Meet Calid should follow pricing");
+  assert.ok(hostPosition > pricingPosition, "Meet the host should follow pricing");
 });

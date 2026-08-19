@@ -42,7 +42,7 @@ const packages: Record<JourneyId, JourneyPackage> = {
     deposit: 495,
     installmentCount: 5,
     installmentAmount: 500,
-    capacity: "Up to 6 travelers continue to Bahia",
+    capacity: "Smaller group continues to Bahia",
     positioning:
       "Everything in Rio Core, followed by four additional nights in Salvador, an included Rio-to-Salvador flight, one included massage, and a more intimate continuation.",
     includedSummary: [
@@ -364,7 +364,7 @@ export const tripData: TripData = {
         "Flight from Rio de Janeiro to Salvador",
         "Four additional nights of shared accommodation in Salvador",
         "One included massage during the Bahia stay",
-        "A smaller continuation group of up to six travelers",
+        "A smaller continuation group",
       ],
     },
   ],
@@ -552,7 +552,7 @@ export const tripData: TripData = {
         {
           question: "What is confirmed about the Bahia continuation?",
           answer: [
-            "The Complete Journey includes everything in Rio Core, the flight from Rio to Salvador, four additional nights of shared accommodation, one included massage, founder-hosted support, and a continuation group of up to six travelers.",
+            "The Complete Journey includes everything in Rio Core, the flight from Rio to Salvador, four additional nights of shared accommodation, one included massage, founder-hosted support, and a smaller continuation group.",
             "The cultural program is still being developed with local context in mind. Exact activities, hosts, venues, and any Black Consciousness Day programming will be shared once confirmed.",
           ],
         },

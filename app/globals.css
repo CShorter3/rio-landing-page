@@ -928,6 +928,10 @@ h3 {
   padding-bottom: clamp(5rem, 9vw, 9rem);
 }
 
+.itinerary-section.terrain::before {
+  opacity: 0.05;
+}
+
 .journey-context-header {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -942,25 +946,98 @@ h3 {
 
 .journey-context-header > p {
   max-width: 34rem;
-  color: var(--dusty-green);
+  color: rgba(255, 248, 236, 0.86);
   font-size: clamp(1rem, 1.35vw, 1.15rem);
 }
 
-.journey-context-grid {
+.journey-route {
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1.12fr) minmax(12rem, 0.44fr) minmax(0, 0.92fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
   margin-top: clamp(3rem, 6vw, 5.5rem);
-  border-block: 1px solid rgba(255, 248, 236, 0.22);
 }
 
-.journey-context-grid article {
-  padding: clamp(2rem, 4vw, 3.75rem) clamp(2rem, 5vw, 5rem) clamp(2rem, 4vw, 3.75rem) 0;
+.journey-route::before {
+  position: absolute;
+  z-index: 0;
+  top: 1.15rem;
+  right: 1rem;
+  left: 1rem;
+  height: 1px;
+  background: var(--terracotta);
+  content: "";
+  opacity: 0.56;
 }
 
-.journey-context-grid article + article {
-  border-left: 1px solid rgba(255, 248, 236, 0.22);
-  padding-right: 0;
-  padding-left: clamp(2rem, 5vw, 5rem);
+.journey-stop,
+.journey-bridge {
+  position: relative;
+  z-index: 1;
+}
+
+.journey-stop {
+  padding-top: 3.35rem;
+}
+
+.journey-stop-rio {
+  padding-right: clamp(1rem, 3vw, 3rem);
+}
+
+.journey-stop-salvador {
+  padding-left: clamp(1rem, 3vw, 3rem);
+}
+
+.journey-stop-marker,
+.journey-bridge-marker {
+  position: absolute;
+  display: grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  place-items: center;
+  border: 1px solid var(--terracotta);
+  border-radius: 50%;
+  background: var(--black);
+  color: var(--peach);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.journey-stop-marker {
+  top: 0;
+  left: 0;
+}
+
+.journey-stop-salvador .journey-stop-marker {
+  background: var(--terracotta);
+  color: var(--off-white);
+}
+
+.journey-bridge {
+  align-self: start;
+  padding-top: 3.45rem;
+}
+
+.journey-bridge-marker {
+  top: 0;
+  left: 50%;
+  color: var(--terracotta);
+  transform: translateX(-50%);
+}
+
+.journey-bridge > p:last-child {
+  margin-top: 0.85rem;
+  color: rgba(255, 248, 236, 0.84);
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(1.55rem, 2.25vw, 2.15rem);
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+
+.journey-bridge strong {
+  color: var(--off-white);
+  font-weight: 600;
 }
 
 .journey-context-label {
@@ -971,18 +1048,27 @@ h3 {
   text-transform: uppercase;
 }
 
-.journey-context-grid h3 {
+.journey-stop h3 {
   margin-top: 0.75rem;
-  font-size: clamp(2.6rem, 4.2vw, 4.5rem);
+  font-size: clamp(2.8rem, 4.5vw, 4.8rem);
 }
 
-.journey-context-grid article > p:not(.journey-context-label) {
+.journey-stop-lede {
+  margin-top: 1rem;
+  color: var(--peach);
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(1.45rem, 2.15vw, 2rem);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.journey-stop-copy > p:not(.journey-context-label):not(.journey-stop-lede):not(.journey-context-meta):not(.journey-context-small-quote) {
   margin-top: 1.2rem;
-  color: rgba(255, 248, 236, 0.76);
+  color: rgba(255, 248, 236, 0.84);
   line-height: 1.75;
 }
 
-.journey-context-grid strong {
+.journey-context-meta {
   display: block;
   margin-top: 1.75rem;
   color: var(--focus-ring);
@@ -992,15 +1078,15 @@ h3 {
   text-transform: uppercase;
 }
 
-.journey-context-quote {
-  max-width: 58rem;
-  margin-top: clamp(3rem, 6vw, 5.5rem);
-  color: var(--off-white);
+.journey-context-small-quote {
+  max-width: 23rem;
+  margin-top: 2rem;
+  color: var(--peach);
   font-family: var(--font-cormorant), Georgia, serif;
-  font-size: clamp(2.5rem, 5vw, 5.2rem);
+  font-size: clamp(1.7rem, 2.6vw, 2.55rem);
   font-weight: 600;
   letter-spacing: -0.035em;
-  line-height: 1;
+  line-height: 1.05;
 }
 
 .itinerary-heading {
@@ -2761,7 +2847,7 @@ h3 {
   .glance-shell,
   .why-grid,
   .journey-context-header,
-  .journey-context-grid,
+  .journey-route,
   .house-heading,
   .house-editorial,
   .itinerary-heading,
@@ -2809,22 +2895,44 @@ h3 {
     margin-top: 1rem;
   }
 
-  .journey-context-grid {
+  .journey-route {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
     margin-top: 2.5rem;
+    padding-left: 2.9rem;
   }
 
-  .journey-context-grid article,
-  .journey-context-grid article + article {
-    border-left: 0;
-    padding: 2rem 0;
+  .journey-route::before {
+    top: 0.65rem;
+    right: auto;
+    bottom: 0.65rem;
+    left: 1.05rem;
+    width: 1px;
+    height: auto;
   }
 
-  .journey-context-grid article + article {
-    border-top: 1px solid rgba(255, 248, 236, 0.2);
+  .journey-stop,
+  .journey-stop-rio,
+  .journey-stop-salvador {
+    padding: 0;
   }
 
-  .journey-context-quote {
-    margin-top: 2.75rem;
+  .journey-stop-marker {
+    left: -2.9rem;
+  }
+
+  .journey-bridge {
+    padding: 1rem 0;
+  }
+
+  .journey-bridge-marker {
+    top: 1rem;
+    left: -2.9rem;
+    transform: none;
+  }
+
+  .journey-context-small-quote {
+    margin-top: 1.5rem;
   }
 
   .house-editorial {
