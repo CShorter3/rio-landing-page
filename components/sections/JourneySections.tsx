@@ -103,7 +103,7 @@ export function WhySofoundExists() {
         </Reveal>
 
         <Reveal className="fit-panel" delay={0.08}>
-          <p className="kicker">Who this journey is for</p>
+          <p className="kicker">Who all is going</p>
           <h3>You’ll feel at home here if you…</h3>
           <ul className="fit-list">
             {journeyFit.map((item, index) => (
