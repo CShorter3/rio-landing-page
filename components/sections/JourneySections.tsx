@@ -72,22 +72,22 @@ export function WhySofoundExists() {
             This is your invitation to experience yourself—and the wider
             world—differently.
           </p>
-          <p>
+          {/* <p>
             Through Brazil’s vibrant nightlife, unforgettable views, scenic
             beaches, local food, culture, and shared experiences, this curated
             journey creates space to step outside routine, reconnect with what
             matters, and make room for your next chapter to emerge.
-          </p>
-          <p>
+          </p> */}
+          {/* <p>
             Sofound exists because meaningful travel should not force you to
             choose between freedom and support, celebration and reflection, or
             adventure and rest.
-          </p>
-          <p>
+          </p> */}
+          {/* <p>
             We create small-group journeys with intentional structure, locally
             rooted experiences, and enough room for real life to happen between
             the planned moments.
-          </p>
+          </p> */}
         </Reveal>
 
         <Reveal className="fit-panel" delay={0.08}>
