@@ -67,7 +67,7 @@ export function WhySofoundExists() {
       <div className="section-shell why-grid">
         <Reveal className="why-story">
           {/* <p className="kicker">Why Sofound exists</p> */}
-          <h2 id="why-title">Travel should feel bigger than a checklist.</h2>
+          <h2 id="why-title">Sofound Rio 2026</h2>
           <p className="section-lede">
             This is your invitation to experience yourself—and the wider
             world—differently.
