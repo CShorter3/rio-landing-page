@@ -72,6 +72,18 @@ export function WhySofoundExists() {
             This is your invitation to experience yourself—and the wider
             world—differently.
           </p>
+          <p>
+            Beyond Brazil's electric nights, cinematic views, scenic beaches, and
+            celebrated food, there is a depth no checklist can capture: neighborhoods
+            with their own pulse, histories carried through music, local perspectives that
+            change how a place feels, and conversations that stay with you after you leave.
+          </p>
+          <p>
+            Sofound creates the structure, context, and community to help you carry that
+            depth into whatever you are building at home-a career, a business, or a new
+            chapter, Return with clearer perspective, renewed energy, and more room to
+            move toward what comes next.
+          </p>
           {/* <p>
             Through Brazil’s vibrant nightlife, unforgettable views, scenic
             beaches, local food, culture, and shared experiences, this curated
