@@ -66,7 +66,7 @@ export function WhySofoundExists() {
     <section className="why-section section-pad" aria-labelledby="why-title">
       <div className="section-shell why-grid">
         <Reveal className="why-story">
-          <p className="kicker">Why Sofound exists</p>
+          {/* <p className="kicker">Why Sofound exists</p> */}
           <h2 id="why-title">Travel should feel bigger than a checklist.</h2>
           <p className="section-lede">
             This is your invitation to experience yourself—and the wider
