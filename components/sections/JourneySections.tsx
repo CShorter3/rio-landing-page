@@ -115,13 +115,13 @@ export function WhySofoundExists() {
             ))}
           </ul>
           <p className="fit-note">
-            Come solo, with a friend, or with a partner—the experience is
+            Come solo or with friends. This experience is
             designed to help the group connect naturally.
           </p>
           <p className="fit-qualifier">
-            This is not a silent retreat or a party-only vacation. It is a
-            social, active, culturally rooted group journey with room for both
-            energy and reflection.
+            Not a silent retreat or a party vacation. It is a
+            social, active, culturally rooted group journey with room for
+            party and reflection.
           </p>
         </Reveal>
       </div>
