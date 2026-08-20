@@ -715,7 +715,7 @@ h3 {
   position: sticky;
   top: 6.5rem;
   color: var(--off-white);
-  border-block: 1px solid rgba(255, 248, 236, 0.2);
+  /* border-block: 1px solid rgba(255, 248, 236, 0.2); */
   padding-block: clamp(2rem, 4vw, 3.5rem);
   padding: clamp(2rem, 4vw, 3.5rem);
   background: #0A1A12;
