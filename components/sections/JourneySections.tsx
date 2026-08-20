@@ -105,7 +105,7 @@ export function WhySofoundExists() {
         <Reveal className="fit-panel" delay={0.08}>
           <p className="kicker">Who all is going</p>
           {/* <h3>You’ll feel at home here if you…</h3> */}
-          <h3>You'll find belonging if you...</h3>
+          <h3>You belong with this group if you...</h3>
           <ul className="fit-list">
             {journeyFit.map((item, index) => (
               <li key={item}>
