@@ -68,12 +68,16 @@ export function ItinerarySection() {
           <header className="journey-context-header">
             <div>
               <p className="kicker kicker-light">Journey overview</p>
-              <h2 id="journey-context-title">Two Ways to Join Us</h2>
+              <h2 id="journey-context-title">Choose your fit</h2>
             </div>
-            <p>
+            {/* <p>
               Everyone begins in Rio. Choose the complete five-night Rio Core
               experience, or continue north with a smaller group for four
               additional nights in Salvador, Bahia.
+            </p> */}
+            <p>
+            Choose the 5-night Rio Core experience or extend your trip to 
+            9 nights with our intimate Salvador continuation.
             </p>
           </header>
 
