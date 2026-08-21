@@ -715,8 +715,10 @@ h3 {
   position: sticky;
   top: 6.5rem;
   color: var(--off-white);
-  border-block: 1px solid rgba(255, 248, 236, 0.2);
+  /* border-block: 1px solid rgba(255, 248, 236, 0.2); */
   padding-block: clamp(2rem, 4vw, 3.5rem);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  background: #0A1A12;
 }
 
 .fit-panel h3 {
@@ -928,79 +930,87 @@ h3 {
   padding-bottom: clamp(5rem, 9vw, 9rem);
 }
 
+.itinerary-section.terrain::before {
+  opacity: 0.05;
+}
+
 .journey-context-header {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(2rem, 7vw, 7rem);
-  align-items: end;
+  max-width: 58rem;
 }
 
 .journey-context-header h2 {
-  max-width: 860px;
   margin-top: 0.9rem;
 }
 
-.journey-context-header > p {
-  max-width: 34rem;
-  color: var(--dusty-green);
-  font-size: clamp(1rem, 1.35vw, 1.15rem);
+.journey-context-header > p:last-child {
+  max-width: 42rem;
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+  color: rgba(255, 248, 236, 0.86);
+  font-size: clamp(1rem, 1.45vw, 1.2rem);
 }
 
-.journey-context-grid {
+.journey-route {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(3rem, 7vw, 6.5rem);
   margin-top: clamp(3rem, 6vw, 5.5rem);
-  border-block: 1px solid rgba(255, 248, 236, 0.22);
 }
 
-.journey-context-grid article {
-  padding: clamp(2rem, 4vw, 3.75rem) clamp(2rem, 5vw, 5rem) clamp(2rem, 4vw, 3.75rem) 0;
+.journey-stop {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 3.35rem minmax(0, 1fr);
+  gap: 1rem;
+  align-content: start;
 }
 
-.journey-context-grid article + article {
-  border-left: 1px solid rgba(255, 248, 236, 0.22);
-  padding-right: 0;
-  padding-left: clamp(2rem, 5vw, 5rem);
+.journey-stop-marker {
+  display: grid;
+  width: 3.35rem;
+  height: 3.35rem;
+  place-items: center;
+  border: 1px solid var(--terracotta);
+  border-radius: 50%;
+  background: var(--terracotta);
+  color: var(--off-white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.journey-stop-copy {
+  min-width: 0;
 }
 
 .journey-context-label {
-  color: var(--peach);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
-.journey-context-grid h3 {
-  margin-top: 0.75rem;
-  font-size: clamp(2.6rem, 4.2vw, 4.5rem);
-}
-
-.journey-context-grid article > p:not(.journey-context-label) {
-  margin-top: 1.2rem;
-  color: rgba(255, 248, 236, 0.76);
-  line-height: 1.75;
-}
-
-.journey-context-grid strong {
-  display: block;
-  margin-top: 1.75rem;
-  color: var(--focus-ring);
+  color: var(--terracotta);
   font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  line-height: 1.5;
-  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.035em;
 }
 
-.journey-context-quote {
-  max-width: 58rem;
-  margin-top: clamp(3rem, 6vw, 5.5rem);
-  color: var(--off-white);
-  font-family: var(--font-cormorant), Georgia, serif;
-  font-size: clamp(2.5rem, 5vw, 5.2rem);
-  font-weight: 600;
-  letter-spacing: -0.035em;
-  line-height: 1;
+.journey-stop h3 {
+  margin-top: 0.65rem;
+  font-size: clamp(2.8rem, 4.6vw, 4.65rem);
+  line-height: 0.94;
+}
+
+.journey-map {
+  width: 100%;
+  margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
+  overflow: hidden;
+}
+
+.journey-map img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.journey-stop-summary {
+  margin-top: clamp(1.3rem, 2.5vw, 2rem);
+  color: rgba(255, 248, 236, 0.84);
+  line-height: 1.75;
 }
 
 .itinerary-heading {
@@ -2761,7 +2771,7 @@ h3 {
   .glance-shell,
   .why-grid,
   .journey-context-header,
-  .journey-context-grid,
+  .journey-route,
   .house-heading,
   .house-editorial,
   .itinerary-heading,
@@ -2809,22 +2819,28 @@ h3 {
     margin-top: 1rem;
   }
 
-  .journey-context-grid {
-    margin-top: 2.5rem;
+  .journey-route {
+    grid-template-columns: 1fr;
+    gap: 4.5rem;
+    margin-top: 3rem;
   }
 
-  .journey-context-grid article,
-  .journey-context-grid article + article {
-    border-left: 0;
-    padding: 2rem 0;
+  .journey-stop {
+    grid-template-columns: 3.35rem minmax(0, 1fr);
+    gap: 0.95rem;
   }
 
-  .journey-context-grid article + article {
-    border-top: 1px solid rgba(255, 248, 236, 0.2);
+  .journey-stop h3 {
+    font-size: clamp(2.85rem, 13vw, 4rem);
   }
 
-  .journey-context-quote {
-    margin-top: 2.75rem;
+  .journey-map {
+    margin-top: 1.25rem;
+  }
+
+  .journey-stop-summary {
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
   }
 
   .house-editorial {

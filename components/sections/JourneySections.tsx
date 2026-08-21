@@ -66,33 +66,46 @@ export function WhySofoundExists() {
     <section className="why-section section-pad" aria-labelledby="why-title">
       <div className="section-shell why-grid">
         <Reveal className="why-story">
-          <p className="kicker">Why Sofound exists</p>
-          <h2 id="why-title">Travel should feel bigger than a checklist.</h2>
+          <p className="kicker">What is happening</p>
+          <h2 id="why-title">Sofound Rio 2026</h2>
           <p className="section-lede">
             This is your invitation to experience yourself—and the wider
             world—differently.
           </p>
           <p>
+            Beyond Brazil&apos;s electric nights, cinematic views, scenic beaches, and
+            celebrated food, there is a depth no checklist can capture: neighborhoods
+            with their own pulse, histories carried through music, local perspectives that
+            change how a place feels, and conversations that stay with you after you leave.
+          </p>
+          <p>
+            Sofound creates the structure, context, and community to help you carry that
+            depth into whatever you are building at home-a career, a business, or a new
+            chapter, Return with clearer perspective, renewed energy, and more room to
+            move toward what comes next.
+          </p>
+          {/* <p>
             Through Brazil’s vibrant nightlife, unforgettable views, scenic
             beaches, local food, culture, and shared experiences, this curated
             journey creates space to step outside routine, reconnect with what
             matters, and make room for your next chapter to emerge.
-          </p>
-          <p>
+          </p> */}
+          {/* <p>
             Sofound exists because meaningful travel should not force you to
             choose between freedom and support, celebration and reflection, or
             adventure and rest.
-          </p>
-          <p>
+          </p> */}
+          {/* <p>
             We create small-group journeys with intentional structure, locally
             rooted experiences, and enough room for real life to happen between
             the planned moments.
-          </p>
+          </p> */}
         </Reveal>
 
         <Reveal className="fit-panel" delay={0.08}>
-          <p className="kicker">Who this journey is for</p>
-          <h3>You’ll feel at home here if you…</h3>
+          <p className="kicker">Who all is going</p>
+          {/* <h3>You’ll feel at home here if you…</h3> */}
+          <h3>You belong with this group if you...</h3>
           <ul className="fit-list">
             {journeyFit.map((item, index) => (
               <li key={item}>
@@ -102,13 +115,13 @@ export function WhySofoundExists() {
             ))}
           </ul>
           <p className="fit-note">
-            Come solo, with a friend, or with a partner—the experience is
+            Come solo or with friends. This experience is
             designed to help the group connect naturally.
           </p>
           <p className="fit-qualifier">
-            This is not a silent retreat or a party-only vacation. It is a
-            social, active, culturally rooted group journey with room for both
-            energy and reflection.
+            Not a silent retreat or a party vacation. It is a
+            social, active, culturally rooted group journey with room for
+            party and reflection.
           </p>
         </Reveal>
       </div>

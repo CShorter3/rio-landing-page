@@ -83,7 +83,7 @@ The current page already has a distinctive visual point of view, unusually clear
 The standalone section will be removed from the component tree and its essential information will be redistributed without loss:
 
 1. **Itinerary opening:** introduce a border-only “one journey, two rhythms” editorial split. The Rio side states that Rio Core is the complete five-night trip and describes coastline, culture, nightlife, shared energy, and Arraial. The Bahia side states that Salvador is an optional smaller continuation with a slower rhythm and deeper Afro-Brazilian context.
-2. **Salvador itinerary transition:** retain the confirmed extension facts—Rio-to-Salvador flight, four shared nights, one massage, up to six travelers—and clearly mark exact cultural programming as in development.
+2. **Salvador itinerary transition:** retain the confirmed extension facts—Rio-to-Salvador flight, four shared nights, one massage, and a smaller continuation group—and clearly mark exact cultural programming as in development.
 3. **Pricing:** retain exact dates, totals, deposits, installment schedules, and the closing line “Rio gives you the momentum. Bahia gives you the depth.” This is the correct place for package comparison.
 4. **FAQ:** add a dedicated “Rio Core vs. Salvador Extension” group answering whether Rio is complete, what the extension includes, and what is still being finalized.
 
