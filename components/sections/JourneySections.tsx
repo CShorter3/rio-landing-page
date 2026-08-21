@@ -73,7 +73,7 @@ export function WhySofoundExists() {
             world—differently.
           </p>
           <p>
-            Beyond Brazil's electric nights, cinematic views, scenic beaches, and
+            Beyond Brazil&apos;s electric nights, cinematic views, scenic beaches, and
             celebrated food, there is a depth no checklist can capture: neighborhoods
             with their own pulse, histories carried through music, local perspectives that
             change how a place feels, and conversations that stay with you after you leave.

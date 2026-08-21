@@ -41,16 +41,21 @@ test("renders the refactored conversion narrative", async () => {
 
   assert.doesNotMatch(html, /<footer\b/i);
   assert.doesNotMatch(html, /class=["'][^"']*rhythms-section/i);
-  assert.match(html, /Two Ways to Join Us/i);
-  assert.match(html, /Everyone begins in Rio/i);
-  assert.match(html, /After day 5/i);
-  assert.match(html, /Rio Core ends complete/i);
-  assert.match(html, /Optional 4-night extension/i);
+  assert.match(html, /Choose your fit/i);
+  assert.match(html, /Choose the complete Rio experience/i);
+  assert.match(html, /Core Trip: Nights 1(?:–|&#x2013;)5/i);
+  assert.match(html, /Optional Extended Trip: Nights 5(?:–|&#x2013;)9/i);
+  assert.doesNotMatch(html, /class=["'][^"']*journey-decision/i);
   assert.doesNotMatch(html, /journey-bridge-marker/i);
   assert.equal(
     (html.match(/class=["']journey-stop-marker["']/gi) ?? []).length,
     2,
     "journey overview should render exactly two timeline markers",
+  );
+  assert.equal(
+    (html.match(/class=["'][^"']*journey-map(?:\s|["'])/gi) ?? []).length,
+    2,
+    "journey overview should render one illustrated map per option",
   );
   assert.doesNotMatch(html, /up to six continuation travelers/i);
   assert.match(html, /Group Fit (?:&|&amp;) Vibe/i);

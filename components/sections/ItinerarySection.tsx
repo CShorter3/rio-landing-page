@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import type { SyntheticEvent } from "react";
 
 import { trackEvent } from "@/lib/analytics";
@@ -66,18 +67,11 @@ export function ItinerarySection() {
           aria-labelledby="journey-context-title"
         >
           <header className="journey-context-header">
-            <div>
-              <p className="kicker kicker-light">Journey overview</p>
-              <h2 id="journey-context-title">Choose your fit</h2>
-            </div>
-            {/* <p>
-              Everyone begins in Rio. Choose the complete five-night Rio Core
-              experience, or continue north with a smaller group for four
-              additional nights in Salvador, Bahia.
-            </p> */}
+            <p className="kicker kicker-light">Journey overview</p>
+            <h2 id="journey-context-title">Choose your fit</h2>
             <p>
-            Choose the 5-night Rio Core experience or extend your trip to 
-            9 nights with our intimate Salvador continuation.
+              Choose the complete Rio experience, or continue with our
+              intimate Salvador extension.
             </p>
           </header>
 
@@ -88,30 +82,22 @@ export function ItinerarySection() {
             <article className="journey-stop journey-stop-rio">
               <span className="journey-stop-marker" aria-hidden="true">01</span>
               <div className="journey-stop-copy">
-                <p className="journey-context-label">Part 01 · Days 1–5</p>
+                <p className="journey-context-label">Core Trip: Nights 1–5</p>
                 <h3>Rio Core</h3>
-                <p className="journey-stop-lede">The complete five-night journey.</p>
-                <p>
+                <figure className="journey-map journey-map-rio">
+                  <Image
+                    src="/images/journey-overview/rio-map.webp"
+                    alt="Illustrated Rio route connecting Christ the Redeemer, Tijuca Forest, Centro and Pedra do Sal, Sugarloaf Mountain, Copacabana and Ipanema, and Morro Dois Irmãos"
+                    width={742}
+                    height={302}
+                    sizes="(max-width: 767px) calc(100vw - 7rem), 42vw"
+                    unoptimized
+                  />
+                </figure>
+                <p className="journey-stop-summary">
                   Coastline, movement, music, local context, shared adventure,
                   and the nights that turn a new group into a real community.
                 </p>
-                <p className="journey-context-meta">November 12–17 · 5 nights</p>
-
-                <aside
-                  className="journey-decision"
-                  id="journey-decision"
-                  aria-label="Decision after Rio Core"
-                >
-                  <div>
-                    <p className="journey-context-label">
-                      After day 5 · Rio Core ends complete
-                    </p>
-                    <p>
-                      Return home with a complete experience—or continue north.
-                    </p>
-                  </div>
-                  <span aria-hidden="true">→</span>
-                </aside>
               </div>
             </article>
 
@@ -122,18 +108,24 @@ export function ItinerarySection() {
               <span className="journey-stop-marker" aria-hidden="true">02</span>
               <div className="journey-stop-copy">
                 <p className="journey-context-label">
-                  Optional 4-night extension · Days 6–9
+                  Optional Extended Trip: Nights 5–9
                 </p>
                 <h3>Continue north to Salvador, Bahia</h3>
-                <p>
+                <figure className="journey-map journey-map-salvador">
+                  <Image
+                    src="/images/journey-overview/salvador-map.webp"
+                    alt="Illustrated Salvador route connecting Pelourinho, Elevador Lacerda, Mercado Modelo, Farol da Barra, and Ilha dos Frades"
+                    width={650}
+                    height={265}
+                    sizes="(max-width: 767px) calc(100vw - 7rem), 42vw"
+                    unoptimized
+                  />
+                </figure>
+                <p className="journey-stop-summary">
                   For travelers who want to stay longer, Bahia shifts the
                   journey into a slower, more intimate rhythm shaped by
                   Afro-Brazilian culture, regional food, local context, and
                   more room to exhale.
-                </p>
-                <p className="journey-context-meta">November 17–21 · 4 additional nights</p>
-                <p className="journey-context-small-quote">
-                  Rio Core is the trip. Salvador is the deeper continuation.
                 </p>
               </div>
             </article>
